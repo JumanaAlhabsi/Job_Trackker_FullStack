@@ -55,8 +55,4 @@ export class NewCoffeeComponent {
       }
     });
   }
-
-  isDisabled(): boolean {
-    return this.coffeeForm.invalid;
-  }  
 }
