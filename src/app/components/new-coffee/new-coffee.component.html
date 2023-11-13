@@ -1,0 +1,31 @@
+<h1>Create a New Coffee</h1>
+<form (ngSubmit)="createCoffee()" [formGroup]="coffeeForm">
+  <label for="name">Name:</label>
+  <input type="text" placeholder="Name" formControlName="name"><br>
+
+  <label for="tagline">Tagline:</label>
+  <input type="text" placeholder="Tagline" formControlName="tagline"><br>
+
+  <label for="description">Description:</label>
+  <textarea placeholder="Description" formControlName="description"></textarea><br>
+
+  <label for="first_roasted">First Roasted:</label>
+  <input type="text" placeholder="First Roasted" formControlName="first_roasted"><br>
+
+  <label for="roaster_tips">Roaster Tips:</label>
+  <input type="text" placeholder="Roaster Tips" formControlName="roaster_tips"><br>
+
+  <label for="strength_level">Strength Level:</label>
+  <input type="number" placeholder="Strength Level" formControlName="strength_level"><br>
+
+  <label for="contributed_by">Contributed By:</label>
+  <input type="text" placeholder="Contributed By" formControlName="contributed_by"><br>
+
+  <p *ngIf="nameInput.invalid && nameInput.touched">Name is required.</p>
+  <p *ngIf="taglineInput.invalid && taglineInput.touched">Tagline is required.</p>
+  <br>
+  <p *ngIf="coffeeCreated">Coffee created successfully!</p>
+  <br>
+  <button mat-raised-button color="accent" type="submit" [disabled]="isDisabled()">Create Coffee</button>
+</form>
+<button mat-raised-button color="accent" routerLink="/">Go Back</button>
