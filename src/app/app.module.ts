@@ -16,6 +16,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 
 import { ReactiveFormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RandomCoffeeComponent } from './components/random-coffee/random-coffee.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomePageComponent,
     NavBarComponent,
     PageNotFoundComponent,
+    RandomCoffeeComponent,
   ],
   imports: [
     BrowserModule,
