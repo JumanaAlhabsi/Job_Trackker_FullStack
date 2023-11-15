@@ -1,8 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
+
 import { NewCoffeeComponent } from './components/new-coffee/new-coffee.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { CoffeeListComponent } from './components/coffee-list/coffee-list.component';
+import { SingleCoffeeComponent } from './components/single-coffee/single-coffee.component';
 import { RandomCoffeeComponent } from './components/random-coffee/random-coffee.component';
 
 const routes: Routes = [
@@ -15,13 +19,21 @@ const routes: Routes = [
     component: NewCoffeeComponent
   },
   {
+    path: 'coffees',
+    component: CoffeeListComponent
+  },
+  {
+    path: 'coffees/:id',
+    component: SingleCoffeeComponent
+  },
+  {
     path: 'random-coffee',
     component: RandomCoffeeComponent
   },
   {
     path: '**',
     component: PageNotFoundComponent
-  }
+  },
 ];
 
 @NgModule({

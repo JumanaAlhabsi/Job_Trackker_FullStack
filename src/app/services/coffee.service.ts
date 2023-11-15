@@ -14,6 +14,15 @@ export class CoffeeService {
     return this.http.post(`${this.apiUrl}/new`, newCoffee);
   }
 
+  getAllCoffees(): Observable<any[]> {
+    const url = `${this.apiUrl}`;
+    return this.http.get<any[]>(url);
+  }
+  
+  getCoffeeById(id: string): Observable<any> {
+    const url = `${this.apiUrl}/${id}`
+    return this.http.get(url);
+  }
 
 
   getRandomCoffee(): Observable<any> {

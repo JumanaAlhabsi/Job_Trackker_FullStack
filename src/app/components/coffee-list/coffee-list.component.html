@@ -1,0 +1,12 @@
+<button class="backHomeButton" mat-raised-button color="accent" routerLink="/">Home</button>
+<br>
+<br>
+<div class="centered-column">
+  <div *ngFor="let coffee of coffees" (click) = "onSelect(coffee)"class="coffee-card">
+    <img [src]="coffee.image_url" alt="{{ coffee.name }}" class="coffee-image">
+    <h2>{{ coffee.name }}</h2>
+    <p>{{ coffee.tagline }}</p>
+    <p>Contributed by: {{ coffee.contributed_by }}</p>
+    </div>
+</div>
+
