@@ -14,8 +14,17 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
-import { ReactiveFormsModule } from "@angular/forms";
+// import { ReactiveFormsModule } from "@angular/forms";
+import { ReactiveFormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { CoffeeListComponent} from './components/coffee-list/coffee-list.component';
+
+import { SingleCoffeeComponent } from './components/single-coffee/single-coffee.component';
+import { RouterModule } from '@angular/router';
+import { CoffeeService } from './services/coffee.service';
+
+
 
 @NgModule({
   declarations: [
@@ -24,6 +33,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomePageComponent,
     NavBarComponent,
     PageNotFoundComponent,
+    CoffeeListComponent,
+    SingleCoffeeComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -34,6 +46,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatButtonModule,
     MatInputModule,
     HttpClientModule,
+    RouterModule,
+    
+    //,
   ],
   providers: [],
   bootstrap: [AppComponent]
