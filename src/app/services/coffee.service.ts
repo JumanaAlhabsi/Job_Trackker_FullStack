@@ -23,4 +23,11 @@ export class CoffeeService {
     const url = `${this.apiUrl}/${id}`
     return this.http.get(url);
   }
+
+
+  getRandomCoffee(): Observable<any> {
+    const url = `${this.apiUrl}/random`;
+    return this.http.get(url);
+  }
+
 }
