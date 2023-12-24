@@ -16,6 +16,7 @@ public class JobApplication {
     private Long id;
     private String position;
     private String companyName;
+    private String status;
 
     @JsonIgnore
     @ManyToOne

@@ -24,17 +24,17 @@ public class interviewService implements InterviewServiceInterface {
 
     public void saveInterview(Interview interview) {
         if (interview.getId() != null) {
-            Optional<Interview> optionalProject = interviewRepository.findById(interview.getId());
-            if (optionalProject.isPresent())
+            Optional<Interview> optionalInterview= interviewRepository.findById(interview.getId());
+            if (optionalInterview.isPresent())
                 throw new ResponseStatusException(HttpStatus.UNPROCESSABLE_ENTITY, "interview with id " + interview.getId() + " already exist");
         }
         interviewRepository.save(interview);
     }
 
-    public void update(Long id, Interview project) {
-        Interview projectFromDB = interviewRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Interview is not found"));
-        project.setId(projectFromDB.getId());
-        interviewRepository.save(project);
+    public void update(Long Interview_id, Interview interview) {
+        Interview InterviewFromDB = interviewRepository.findById(Interview_id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Interview is not found"));
+        interview.setId(InterviewFromDB.getId());
+        interviewRepository.save(interview);
     }
 
     public void deleteInterview(Long id) {

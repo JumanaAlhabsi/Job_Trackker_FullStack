@@ -21,15 +21,16 @@ public class InterviewController {
     @Autowired
     private interviewService interviewService;
 
+    //only for the jobSeeker
     @GetMapping("/Interviews/{id}")
     @ResponseStatus(HttpStatus.OK)
     public Interview getintervieIdById(@PathVariable(name = "id") Long interviewId) {
         return interviewRepository.findById(interviewId).get();
     }
 
-    @GetMapping("/interviewId")
+    @GetMapping("/interview")
     @ResponseStatus(HttpStatus.OK)
-    public List<Interview> getInterviewByCategoryAndDepartment() {
+    public List<Interview> getAllInterviews() {
         return interviewRepository.findAll();
     }
 
@@ -39,11 +40,11 @@ public class InterviewController {
         interviewService.saveInterview(interview);
     }
 
-    @PutMapping("/interviews/{id}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void updateInterview(@PathVariable Long id,@RequestBody @Valid Interview interview){
-        interviewService.update(id, interview);
-    }
+//    @PutMapping("/interviews/{id}")
+//    @ResponseStatus(HttpStatus.NO_CONTENT)
+//    public void updateInterview(@PathVariable Long id,@RequestBody @Valid Interview interview){
+//        interviewService.update(id, interview);
+//    }
 
 
     @DeleteMapping("/interviews/{id}")
