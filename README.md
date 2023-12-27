@@ -145,6 +145,6 @@ Model (JobApplication):
 Repository (JobApplicationRepository)
 
 
-———————————————————————————————————————————————————————————————-
+
 
 This structure is designed to handle the scenarios you described, where Job Seekers can apply for jobs, view their applications, and view interview details, while Admins can view all applications, update application statuses, and generate interview details. If you have any specific adjustments or additional requirements, feel free to let me know!
