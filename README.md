@@ -32,7 +32,8 @@ Components:
     * Displays details of a specific interview for a job application.
     * Retrieves interview details using InterviewService.
     * May include an option to go back to JobApplicationsComponent or other relevant views.
-———————————————————————————————————————————————————————————————-
+
+
 
 Services:
 * 		JobApplicationService:
@@ -41,7 +42,8 @@ Services:
 * 		InterviewService:
     * Manages communication with the backend for interview-related operations.
     * Methods: getInterviewDetails(applicationId).
-———————————————————————————————————————————————————————————————-
+
+
 
 Models:
 * 		JobApplication Model:
@@ -54,7 +56,7 @@ Models:
     * Represents user data.
     * Attributes: userId, username, email, role (Admin/JobSeeker).
     * 
-———————————————————————————————————————————————————————————————-
+
 
 Routing:
 Configure Angular Router to navigate between components based on user role and actions.
@@ -87,7 +89,7 @@ Security (SecurityConfig):
     * Enable JWT (JSON Web Token) authentication.
     * 
 Repository (UserRepository)
-———————————————————————————————————————————————————————————————-
+
 
 2- 		JobApplicationController: 
 Controller (JobApplicationController):
@@ -107,7 +109,6 @@ Model (JobApplication):
 
 Repository (JobApplicationRepository)
 
-———————————————————————————————————————————————————————————————-
 
 3-              InterviewController:
 
@@ -125,7 +126,7 @@ Model (Interview):
     * Attributes: interviewId, applicationId, dateTime, location.
 
 Repository (InterviewRepository)
-———————————————————————————————————————————————————————————————-
+
 
 4- 	AdminJobApplicationsController:
  Controller (AdminJobApplicationsController):
